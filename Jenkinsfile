@@ -23,6 +23,8 @@ pipeline {
         }
         stage('Run Application') {
             // write your logic here
+            steps {
+            }
         }
         stage('Test') {
             // write your logic here
@@ -38,6 +40,8 @@ pipeline {
         }
         stage('Post Build Notification') {
             // write your logic here
+            steps {
+            }
     }
     }
 }
