@@ -16,15 +16,8 @@ pipeline {
             // write your logic here
             steps {
                 bat "mvn clean install"
-            }
-                
+            }                
         }
-        /*stage('Run Application') {
-            // write your logic here
-            steps {
-                echo 'running'
-            }
-        }*/
         stage('Test') {
             // write your logic here
             steps {
