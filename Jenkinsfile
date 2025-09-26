@@ -5,13 +5,13 @@ pipeline {
         maven 'Maven3'
     }
     stages {
-        stage('Checkout') {
+        /*stage('Checkout') {
             steps {
                 // write your logic here
                 echo 'Checking out the code'
                 git "https://github.com/anindyak1986/java-batch-job-example.git"
             }
-        }
+        }*/
         stage('Build') {
             // write your logic here
             steps {
