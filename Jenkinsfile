@@ -8,12 +8,14 @@ pipeline {
         stage('Checkout') {
             steps {
                 // write your logic here
+                echo 'Checking out the code'
                 git "https://github.com/anindyak1986/java-batch-job-example.git"
             }
         }
         stage('Build') {
             // write your logic here
             steps {
+                echo 'Installing dependencies'
                 sh 'mvn clean install -DskipTests=true'
                 sh 'mvn clean compile'
             }
@@ -25,6 +27,7 @@ pipeline {
         stage('Test') {
             // write your logic here
             steps {
+                echo 'Running JUnit tests'
                 sh 'mvn test'
             }
             post {
