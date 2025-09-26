@@ -24,6 +24,7 @@ pipeline {
         stage('Run Application') {
             // write your logic here
             steps {
+                echo 'running'
             }
         }
         stage('Test') {
@@ -41,6 +42,7 @@ pipeline {
         stage('Post Build Notification') {
             // write your logic here
             steps {
+                echo 'post build'
             }
     }
     }
