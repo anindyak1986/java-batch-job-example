@@ -16,8 +16,8 @@ pipeline {
             // write your logic here
             steps {
                 echo 'Installing dependencies'
-                cmd.exe 'mvn clean install -DskipTests=true'
-                cmd.exe 'mvn clean compile'
+                bat "mvn clean install -DskipTests=true"
+                bat "mvn clean compile"
             }
                 
         }
@@ -28,7 +28,7 @@ pipeline {
             // write your logic here
             steps {
                 echo 'Running JUnit tests'
-                cmd.exe 'mvn test'
+                bat "mvn test"
             }
             post {
                 always {
