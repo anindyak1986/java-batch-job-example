@@ -8,7 +8,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // write your logic here
-                git "https://github.com/expertszen/java-batch-job-example.git"
+                git "https://github.com/anindyak1986/java-batch-job-example.git"
             }
         }
         stage('Build') {
