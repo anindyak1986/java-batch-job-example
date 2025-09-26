@@ -15,22 +15,19 @@ pipeline {
         stage('Build') {
             // write your logic here
             steps {
-                echo 'Installing dependencies'
-                bat "mvn clean install -DskipTests=true"
-                bat "mvn clean compile"
+                bat "mvn clean install"
             }
                 
         }
-        stage('Run Application') {
+        /*stage('Run Application') {
             // write your logic here
             steps {
                 echo 'running'
             }
-        }
+        }*/
         stage('Test') {
             // write your logic here
             steps {
-                echo 'Running JUnit tests'
                 bat "mvn test"
             }
             post {
@@ -39,11 +36,11 @@ pipeline {
                 }
             }
         }
-        stage('Post Build Notification') {
+        /*stage('Post Build Notification') {
             // write your logic here
             steps {
                 echo 'post build'
             }
-    }
+        }*/
     }
 }
